@@ -1,0 +1,47 @@
+#tree {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  #tree li {
+    margin: 10px 0;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #tree li:hover {
+    background-color: #eee;
+  }
+  
+  #tree ul {
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  
+  #tree li.open ul {
+    display: block;
+  }
+  
+  #tree li:before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+  }
+  
+  #tree li:nth-child(n)::before {
+    margin-top: -5px;
+  }
+  
+  #tree li.open:before {
+    background-color: #007bff;
+  }
+  
